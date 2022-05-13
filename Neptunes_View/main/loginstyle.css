@@ -1,0 +1,146 @@
+body {
+    background: rgb(34,193,195);
+    background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
+    height: 100%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: "HP Simplified";
+}
+
+#social{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    cursor: pointer;
+}
+
+.fa-twitter{
+    margin: 20px;
+    color: white;
+}
+
+.fa-instagram{
+    margin: 20px;
+    color: white;
+}
+
+.fa-twitter:hover{
+    color: coral;
+}
+
+.fa-instagram:hover{
+    color: coral;
+}
+
+#logo{
+    display: flex;
+    justify-content: center;
+}
+
+#container{
+    width:400px;
+    margin: auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 30px;
+}
+
+#container h1{
+    display: flex;
+    justify-content: center;
+}
+
+input[type=text], input[type=password] {
+    width: 95%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border-top-style: hidden;
+    border-right-style: hidden;
+    border-bottom-style: solid;
+    border-left: hidden;
+    outline: transparent;
+}
+
+#forgottenPassword a{
+    font-size: small;
+    color: lightseagreen;
+    float: right;
+}
+
+.wrapper{
+    margin-right: 150px;
+    padding: 1.5rem 0;
+    filter: url('#goo');
+}
+
+.button{
+    display: inline-block;
+    text-align: center;
+    background: lightseagreen;
+    color: white;
+    padding: 1em 1em 1em;
+    line-height: 1;
+    border-radius: 1em;
+    min-width: 8.23em;
+    text-decoration: none;
+    position: relative;
+    font-size: 1.25rem;
+}
+
+.button:before, .button:after {
+    width: 4.4em;
+    height: 2.95em;
+    position: absolute;
+    content: "";
+    display: inline-block;
+    background: lightseagreen;
+    border-radius: 50%;
+    transition: transform 1s ease;
+    transform: scale(0);
+    z-index: -1;
+}
+
+.button:before {
+    top: -25%;
+    left: 20%;
+}
+
+.button:after {
+    bottom: -25%;
+    right: 20%;
+}
+
+.button:hover:before,
+.button:hover:after {
+    transform: none;
+}
+
+#noAccount a{
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    color: lightseagreen;
+}
+
+.custom-shape-divider-bottom-1650442264 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1650442264 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 150px;
+}
+
+.custom-shape-divider-bottom-1650442264 .shape-fill {
+    fill: #FFFFFF;
+}
