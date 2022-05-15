@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {Playlist} from "../../models/playlist";
+import {HttpPlaylistService} from "../../services/http-playlist.service";
 
 @Component({
   selector: 'app-playlist',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PlaylistComponent implements OnInit {
 
-  constructor() { }
+  apiResult: Array<Playlist>|undefined;
 
-  ngOnInit(): void {
+  constructor(private playlistService: HttpPlaylistService) {
   }
 
+  ngOnInit(): void {
+    this.playlistService.getPlaylists().subscribe((results) => {
+      this.apiResult = results;
+    });
+  }
 }

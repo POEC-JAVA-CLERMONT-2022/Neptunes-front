@@ -9,6 +9,9 @@ import { TrackComponent } from './track/track.component';
 import { PlaylistComponent } from './playlist/playlist.component';
 import { ScoreComponent } from './score/score.component';
 import { ThemeComponent } from './theme/theme.component';
+import { CardComponent } from './card/card.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -18,11 +21,14 @@ import { ThemeComponent } from './theme/theme.component';
     TrackComponent,
     PlaylistComponent,
     ScoreComponent,
-    ThemeComponent
+    ThemeComponent,
+    CardComponent,
+    NavbarComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
