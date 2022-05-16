@@ -1,6 +1,6 @@
 <div class="container col-12 row mx-auto" *ngIf="apiResult">
-  <div class="card-group col-3 mb-3 mt-3" *ngFor="let playlist of apiResult">
-    <div id="{{playlist.id}}" class="card col-3 m-2 mx-auto">
+  <div class="card-group col-lg-3 col-md-6 mb-3 mt-3" *ngFor="let playlist of apiResult">
+    <div id="{{playlist.id}}" class="card m-2">
       <img class="card-img-top img-fluid" src="https://picsum.photos/400/500?random={{playlist.id}}'" alt="Card image cap">
       <div class="card-body card-img-overlay">
         <h5 class="card-title info fw-bold">{{playlist.name}}</h5>
@@ -10,7 +10,7 @@
               {{track.trackName}} - {{track.trackAuthor}}
             </li>
           </ul>
-        <p class="btn btn-warning" [class.d-none]="!playlist.random">Aléatoire</p>
+        <p class="rounded-pill bg-warning w-50 text-center" [class.d-none]="!playlist.random">Aléatoire</p>
       </div>
     </div>
   </div>

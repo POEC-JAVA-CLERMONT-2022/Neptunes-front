@@ -29,12 +29,12 @@
     }
     .card-img-overlay{
       transform: translateY(0);
-      transition: transform .25s ease-out;
+      transition: transform .15s ease-out;
     }
     .card-text{
       opacity: 1;
       transform: translateX(0);
-      transition: opacity .5s ease-out, transform .2s ease-out;
+      transition: opacity .5s ease-out, transform .15s ease-out;
     }
     .btn{
       opacity:1;
@@ -46,4 +46,8 @@
       display: none;
     }
   }
+}
+
+.playlist-btn:hover{
+
 }

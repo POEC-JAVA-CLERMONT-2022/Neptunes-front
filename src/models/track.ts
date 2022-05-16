@@ -31,11 +31,11 @@ export class Track {
     this._trackAuthor = value;
   }
 
-  get trackRelaeseYear(): string {
+  get trackReleaseYear(): string {
     return this._trackReleaseYear;
   }
 
-  set trackRelaeseYear(value: string) {
+  set trackReleaseYear(value: string) {
     this._trackReleaseYear = value;
   }
 
