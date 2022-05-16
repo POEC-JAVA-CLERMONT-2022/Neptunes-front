@@ -2,8 +2,14 @@
   <div class="card-group col-3 mb-3 mt-3" *ngFor="let playlist of apiResult">
     <div id="{{playlist.id}}" class="card col-3 m-2 mx-auto">
       <img class="card-img-top img-fluid" src="https://picsum.photos/400/500?random={{playlist.id}}'" alt="Card image cap">
-      <div class="card-body">
+      <div class="card-body card-img-overlay">
         <h5 class="card-title info fw-bold">{{playlist.name}}</h5>
+        <p class="card-title text">contient {{playlist.tracks.length}} morceaux</p>
+          <ul class="list-tracks" *ngFor="let track of playlist.tracks">
+            <li>
+              {{track.trackName}} - {{track.trackAuthor}}
+            </li>
+          </ul>
         <p class="btn btn-warning" [class.d-none]="!playlist.random">Aléatoire</p>
       </div>
     </div>

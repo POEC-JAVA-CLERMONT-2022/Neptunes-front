@@ -1,9 +1,10 @@
+import {Track} from "./track";
 
 export class Playlist {
 
   private _id: number = 0;
   private _name: string = '';
-  private _tracks: string = '';
+  private _tracks: Array<Track> = [];
   private _random: boolean = false;
 
   get id(): number {
@@ -22,11 +23,12 @@ export class Playlist {
     this._name = value;
   }
 
-  get tracks(): string {
+
+  get tracks(): Array<Track> {
     return this._tracks;
   }
 
-  set tracks(value: string) {
+  set tracks(value: Array<Track>) {
     this._tracks = value;
   }
 
