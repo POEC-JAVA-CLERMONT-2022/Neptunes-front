@@ -7,7 +7,7 @@
         <h5 class="card-title info fw-bold">{{playlist.name}}</h5>
         <p class="card-title text">contient {{playlist.tracks.length}} morceaux</p>
           <ul class="list-tracks" *ngFor="let track of playlist.tracks">
-            <li style="cursor:pointer;" routerLink="{{track.trackURL}}">
+            <li routerLink="{{track.trackURL}}">
               {{track.trackName}} - {{track.trackAuthor}}
             </li>
           </ul>
