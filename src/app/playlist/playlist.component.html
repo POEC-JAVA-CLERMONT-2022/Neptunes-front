@@ -1,16 +1,19 @@
 <div class="container col-12 row mx-auto" *ngIf="apiResult">
   <div class="card-group col-lg-3 col-md-6 mb-3 mt-3" *ngFor="let playlist of apiResult">
     <div id="{{playlist.id}}" class="card m-2">
-      <img class="card-img-top img-fluid" src="https://picsum.photos/400/500?random={{playlist.id}}'" alt="Card image cap">
+      <button (click)="deletePlaylist(playlist.id)" style="z-index: 100" type="button" class="btn-close bg-danger rounded-circle m-1 align-self-end" aria-label="Remove"></button>
+      <img class="card-img-top img-fluid position-absolute" src="https://picsum.photos/400/500?random={{playlist.id}}'" alt="Card image cap">
       <div class="card-body card-img-overlay">
         <h5 class="card-title info fw-bold">{{playlist.name}}</h5>
         <p class="card-title text">contient {{playlist.tracks.length}} morceaux</p>
           <ul class="list-tracks" *ngFor="let track of playlist.tracks">
-            <li>
+            <li style="cursor:pointer;" routerLink="{{track.trackURL}}">
               {{track.trackName}} - {{track.trackAuthor}}
             </li>
           </ul>
-        <p class="rounded-pill bg-warning w-50 text-center" [class.d-none]="!playlist.random">Aléatoire</p>
+        <span class="d-flex">
+        <p class="m-1 rounded-pill bg-warning w-50 text-center" [class.d-none]="!playlist.random">Aléatoire</p>
+      </span>
       </div>
     </div>
   </div>
