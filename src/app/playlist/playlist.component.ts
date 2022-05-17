@@ -30,9 +30,9 @@ export class PlaylistComponent implements OnInit {
       if (this.paramId) {
         this.playlistService.deletePlaylist(this.paramId).subscribe((playlist) => {
           this.playlist = playlist;
+          this.ngOnInit()
         });
       }
     });
-    window.location.reload()
   }
 }
