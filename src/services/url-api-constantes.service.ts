@@ -8,6 +8,6 @@ export class UrlApiConstantes {
     })
   };
 
-  static urlApiplaylists: string = 'http://localhost:8080/playlists'
+  static urlApiplaylists: string = 'https://neptunesapi.azurewebsites.net/playlists'
 
 }
