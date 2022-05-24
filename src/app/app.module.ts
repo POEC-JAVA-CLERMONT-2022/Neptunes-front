@@ -12,6 +12,7 @@ import { ThemeComponent } from './theme/theme.component';
 import { CardComponent } from './card/card.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import {HttpClientModule} from "@angular/common/http";
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import {HttpClientModule} from "@angular/common/http";
     ThemeComponent,
     CardComponent,
     NavbarComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
